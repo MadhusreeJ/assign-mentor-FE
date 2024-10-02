@@ -10,7 +10,7 @@ const Database = () => {
   
     let getData = async () => {
         try {
-          const students = await axios.get("https://assign-mentor-be-cbv0.onrender.com/getallstudents");
+          const students = await axios.get("https://assign-mentor-be-lga4.onrender.com/getallstudents");
           setStudents(students.data);
         } catch (error) {
           console.log(error);
@@ -23,7 +23,7 @@ const Database = () => {
 
       let getMentorData = async () => {
         try {
-          const mentors = await axios.get("https://assign-mentor-be-cbv0.onrender.com/getallmentors");
+          const mentors = await axios.get("https://assign-mentor-be-lga4.onrender.com/getallmentors");
           setMentors(mentors.data);
         } catch (error) {
           console.log(error);
@@ -38,14 +38,14 @@ const Database = () => {
         event.preventDefault()
         if(selectedMentor.mentor === 'all' ){
           try {
-            const students = await axios.get("https://assign-mentor-be-cbv0.onrender.com/getallstudents");
+            const students = await axios.get("https://assign-mentor-be-lga4.onrender.com/getallstudents");
             setStudents(students.data);
           } catch (error) {
             console.log(error);
           }
         }else{
           try {
-            const students = await axios.get(`https://assign-mentor-be-cbv0.onrender.com/studentsmentor/${selectedMentor._id}`);
+            const students = await axios.get(`https://assign-mentor-be-lga4.onrender.com/studentsmentor/${selectedMentor._id}`);
             setStudents(students.data);
           } catch (error) {
             console.log(error);
