@@ -49,7 +49,7 @@ const AssignMentor = () => {
   let onsubmit = async(event)=>{
     event.preventDefault()
     try {
-       await axios.put(`http://localhost:3000/assignmentor/${selectedMentor}/students`,students);
+       await axios.put(`https://assign-mentor-be-cbv0.onrender.com/assignmentor/${selectedMentor}/students`,students);
        navigate("/");
       } catch(error){
              console.log(error);
