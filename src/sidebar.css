@@ -1,0 +1,29 @@
+.linkstyle {
+    text-decoration: none;
+    color: rgb(42, 199, 50);
+    font-size:larger;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-;
+    position: relative;
+    display: inline-block; 
+  }
+  
+  .linkstyle::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; 
+    width: 0;
+    background: #000; 
+    transition: width 0.3s ease; 
+  }
+  
+  .linkstyle:hover::after,
+  li.active .linkstyle::after {
+    width: 100%; 
+  }
+  
+  li.active .linkstyle {
+    font-weight: bold; 
+  }

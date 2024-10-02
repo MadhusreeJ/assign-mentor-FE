@@ -1,0 +1,26 @@
+
+        body {
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .sidebar {
+            height: 100vh; /* Full height */
+            position: fixed; /* Fixed sidebar */
+            top: 0;
+            left: 0;
+            z-index: 100; /* Sit on top */
+            background-color: #f8f9fa; /* Light background */
+            padding: 20px; /* Padding */
+            border-right: 2px solid #daf2db
+        }
+        .content {
+            margin-left: 250px; /* Space for sidebar */
+            padding: 20px; /* Padding */
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on small screens */
+            }
+            .content {
+                margin-left: 0; /* No margin on small screens */
+            }
+        }
