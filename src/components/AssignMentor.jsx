@@ -13,7 +13,7 @@ const AssignMentor = () => {
 
     let getData = async () => {
         try {
-          const unassignedStudents = await axios.get("https://assign-mentor-be-9cez.onrender.com/unassignedstudents");
+          const unassignedStudents = await axios.get("https://assign-mentor-be-cbv0.onrender.com/unassignedstudents");
           setUnassignedStudents(unassignedStudents.data);
         } catch (error) {
           console.log(error);
@@ -26,7 +26,7 @@ const AssignMentor = () => {
 
       let getMentorData = async () => {
         try {
-          const mentors = await axios.get("https://assign-mentor-be-9cez.onrender.com/getallmentors");
+          const mentors = await axios.get("https://assign-mentor-be-cbv0.onrender.com/getallmentors");
           setMentors(mentors.data);
         } catch (error) {
           console.log(error);
@@ -49,7 +49,7 @@ const AssignMentor = () => {
   let onsubmit = async(event)=>{
     event.preventDefault()
     try {
-       await axios.put(`https://assign-mentor-be-9cez.onrender.com/assignmentor/${selectedMentor}/students`,students);
+       await axios.put(`http://localhost:3000/assignmentor/${selectedMentor}/students`,students);
        navigate("/");
       } catch(error){
              console.log(error);

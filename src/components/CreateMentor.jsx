@@ -16,7 +16,7 @@ const CreateMentor = () => {
       try {
         console.log(values);
         await axios.post(
-          "https://assign-mentor-be-9cez.onrender.com/creatementor",
+          "https://assign-mentor-be-cbv0.onrender.com/creatementor",
           values);
         navigate("/");
       } catch (error) {

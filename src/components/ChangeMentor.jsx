@@ -12,7 +12,7 @@ const ChangeMentor = () => {
 
   let getMentorData = async () => {
     try {
-      const mentors = await axios.get("https://assign-mentor-be-9cez.onrender.com/getallmentors");
+      const mentors = await axios.get("https://assign-mentor-be-cbv0.onrender.com/getallmentors");
       setMentors(mentors.data);
     } catch (error) {
       console.log(error);
@@ -27,7 +27,7 @@ const ChangeMentor = () => {
     event.preventDefault()
     console.log(selectedMentor);
     try {
-       await axios.put(`https://assign-mentor-be-9cez.onrender.com/changementor/${params.id}`,selectedMentor);
+       await axios.put(`https://assign-mentor-be-cbv0.onrender.com/changementor/${params.id}`,selectedMentor);
        navigate("/");
       } catch(error){
              console.log(error);

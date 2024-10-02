@@ -10,7 +10,7 @@ const ViewStudent = () => {
 
     let getData = async () => {
         try {
-          const student = await axios.get(`https://assign-mentor-be-9cez.onrender.com/previousmentors/${params.id}`);
+          const student = await axios.get(`https://assign-mentor-be-cbv0.onrender.com/previousmentors/${params.id}`);
           setStudent(student.data.previous_mentor);
         } catch (error) {
           console.log(error);

@@ -12,7 +12,7 @@ const CreateStudent = () => {
 
     let getMentorData = async () => {
       try {
-        const mentors = await axios.get("https://assign-mentor-be-9cez.onrender.com/getallmentors");
+        const mentors = await axios.get("https://assign-mentor-be-cbv0.onrender.com/getallmentors");
         setMentors(mentors.data);
       } catch (error) {
         console.log(error);
@@ -34,7 +34,7 @@ const CreateStudent = () => {
       try {
         console.log(values);
         await axios.post(
-          "https://assign-mentor-be-9cez.onrender.com/createstudent",
+          "https://assign-mentor-be-cbv0.onrender.com/createstudent",
           values);
         navigate("/");
       } catch (error) {
@@ -77,8 +77,8 @@ const CreateStudent = () => {
             <label htmlFor="">Phone Number</label>
             <input
               type="tel"
-              maxlength="10"
-              minLength='10'
+              maxlength={10}
+              minLength={10}
               required
               name="phone_number"
               value={formik.values.phone_number}
