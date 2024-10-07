@@ -91,7 +91,7 @@ const CreateStudent = () => {
             <label htmlFor="">Mentor</label>
             <select className="form-select" aria-label="Default select example" name="mentor" value={formik.values.mentor}
         onChange={formik.handleChange} >
-    <option>Choose mentor</option>
+    <option value={"Not assigned"}>Choose mentor</option>
   {mentors.map((mentor, key) => {
     return(
         <option index={key} value={mentor.mentor_name}>{mentor.mentor_name}</option>
