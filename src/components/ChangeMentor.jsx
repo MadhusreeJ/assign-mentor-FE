@@ -42,7 +42,7 @@ const ChangeMentor = () => {
         </nav>
       <select className="form-select" aria-label="Default select example" style={{marginTop:2}}
         onChange={e => setSelectedMentor(JSON.parse(e.target.value))} >
-    <option>Choose mentor</option>
+    <option value={"Not assigned"}>Choose mentor</option>
   {mentors.map((mentor, key) => {
     return(
         <option index={key} value={JSON.stringify(mentor)}>{mentor.mentor_name}</option>
